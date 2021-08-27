@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t naspuka/docker-react -f Dockerfile.dev
+  - docker build -t naspuka/docker-react -f Dockerfile.dev .
 
 script:
   - docker run naspuka/docker-react npm run test -- --coverage

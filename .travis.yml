@@ -1,4 +1,7 @@
-sudo: required
+sudo: required language: node_js
+node_js:
+    - "stable"
+    
 services:
   - docker
 
@@ -7,3 +10,13 @@ before_install:
 
 script:
   - docker run naspuka/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-148344494599"
+  bucket_path: "docker"
+  on: 
+    branch: master

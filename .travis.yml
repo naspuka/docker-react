@@ -8,10 +8,10 @@ services:
   - docker
 
 before_install:
-  - travis_wait 30 docker build -t naspuka/docker-react -f Dockerfile.dev .
+  - docker build -t naspuka/docker-react -f Dockerfile.dev .
 
 script:
-  - travis_wait 30 docker run naspuka/docker-react npm run test -- --coverage
+  - docker run -e CI=true naspuka/docker-react npm run test 
 
 # deploy:
 #   provider: elasticbeanstalk

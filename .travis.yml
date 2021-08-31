@@ -7,13 +7,11 @@ sudo: required
 services:
   - docker
 
-install: travis_wait 30 mvn install
-
 before_install:
-  - docker build -t naspuka/docker-react -f Dockerfile.dev .
+  - travis_wait 30 docker build -t naspuka/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run naspuka/docker-react npm run test -- --coverage
+  - travis_wait 30 docker run naspuka/docker-react npm run test -- --coverage
 
 # deploy:
 #   provider: elasticbeanstalk

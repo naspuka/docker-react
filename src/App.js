@@ -7,8 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Lets Run react on docker
-          Auto Compiler
+        Intro to CI || CD Pipeline with DevOps NG.
         </p>
         <a
           className="App-link"
@@ -16,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Intro to CI || CD Pipeline with DevOps NG.
+          Learn React JS
         </a>
       </header>
     </div>

@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React JS
+          Intro to CI || CD Pipeline with DevOps NG.
         </a>
       </header>
     </div>
